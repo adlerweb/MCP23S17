@@ -36,7 +36,7 @@ MCP outputchip(2, 10);            // Instantiate an object called "outputchip" o
 void setup() {
   inputchip.begin();
   outputchip.begin();
-  for (int i = 1; i <= 16; i++) {    // Since we are only workign with one bit at a time, use a loop to take action each pin (0-15)
+  for (int i = 0; i <= 15; i++) {    // Since we are only workign with one bit at a time, use a loop to take action each pin (0-15)
     inputchip.pinMode(i, HIGH);      // Use bit-write mode to set all of the current pin on inputchip to be inputs
     inputchip.pullupMode(i, HIGH);   // Use bit-write mode to Turn on the internal pull-up resistor for the current pin
     inputchip.inputInvert(i, HIGH);  // Use bit-write mode to invert the input so that logic 0 is read as HIGH
@@ -45,7 +45,7 @@ void setup() {
 }
 
 void loop() {
-  for (int i = 1; i <=16; i++) {       // Step through each of the 16 pins on the I/O chips
+  for (int i = 0; i <=15; i++) {       // Step through each of the 16 pins on the I/O chips
     int value;                         // declare an integer to hold the value temporarily.
     value = inputchip.digitalRead(i);  // read the input chip in bit-mode, storing the result for bit "i" in "value"
     outputchip.digitalWrite(i, value); // write the output chip in bit-mode, using our variable "value" as the argument for bit "i"
