@@ -1,0 +1,28 @@
+{
+  "name": "MCP23S17",
+  "keywords": "GPIO, SPI, Microchip, Port Expander",
+  "description": "Microchip MCP23S17 SPI I/O Expander for Arduino",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/adlerweb/MCP23S17.git"
+  },
+  "authors":
+  [
+    {
+      "name": "Florian Knodt",
+      "email": "arduino@adlerweb.info",
+      "url": "https://www.adlerweb.info",
+      "maintainer": true
+    },
+    {
+      "name": "Cort Buffington"
+    },
+    {
+      "name": "Keith Neufeld"
+    }
+  ],
+  "version": "2018.09.24",
+  "frameworks": "arduino",
+  "platforms": "*"
+}
