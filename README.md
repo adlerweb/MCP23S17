@@ -4,9 +4,15 @@ Arduino Library for the [MCP23S17 SPI IO expander](http://ww1.microchip.com/down
 
 Note that this library *does not* work with the sister-chip MCP23017 which communicates over I2C.
 
+Also note that the MCP23 chip family has its own 3 bit (8 value) addressing scheme, independent of either the SPI or I2C buses. What this means is:
+ * You need to ensure you are accessing the correct address before communication will succeed
+ * You can connect up to 8 MCP23 family devices on the same slave select line on the same bus
+
+It seems some modules default to address `0`, and others default to address `1` (try these two addresses before trying any others).
+
 ## Sourcing
 
-Various [Taobao pages](https://item.taobao.com/item.htm?id=557956934643) offer MCP23S17 modules such as this one.
+Various [Taobao pages](https://item.taobao.com/item.htm?id=557956934643) offer MCP23S17 modules such as this one, which defaults to address `0`.
 
 ![image](mcp23s17-module.jpg)
 
